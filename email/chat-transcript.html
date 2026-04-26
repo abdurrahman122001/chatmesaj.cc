@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{site_name}} — Your chat transcript</title>
+</head>
+<body style="margin:0; padding:0; background:#eef3ff; font-family: Arial, Helvetica, sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef3ff; padding:32px 12px;">
+    <tr>
+      <td align="center">
+
+        <!-- Logo -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px;">
+          <tr>
+            <td align="center" style="padding-bottom:18px;">
+              <img src="logo_mail.png" alt="{{site_name}}" width="120" style="display:block; border:0; outline:none; text-decoration:none; height:auto;" />
+            </td>
+          </tr>
+        </table>
+
+        <!-- Card -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px; background:#ffffff; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.08); overflow:hidden;">
+          <tr>
+            <td align="center" style="padding:40px 36px 24px;">
+
+              <!-- Illustration -->
+              <img src="02.png" alt="" width="140" style="display:block; border:0; outline:none; text-decoration:none; height:auto; margin:0 auto 24px;" />
+
+              <!-- Title -->
+              <h1 style="margin:0 0 14px; font-size:20px; font-weight:700; color:#1f2937; font-family:Arial, Helvetica, sans-serif;">
+                Your chat has ended
+              </h1>
+
+              <!-- Body -->
+              <p style="margin:0 auto; max-width:380px; color:#6b7280; font-size:14px; line-height:1.6; font-weight:500; font-family:Arial, Helvetica, sans-serif;">
+                Thank you for contacting {{site_name}} support. Your conversation has been closed and a full transcript is included below for your records.
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Chat meta -->
+          <tr>
+            <td style="padding:0 36px 8px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f3f6ff; border-radius:8px;">
+                <tr>
+                  <td style="padding:14px 18px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#4b5563; line-height:1.6;">
+                    <strong style="color:#1f2937;">Chat ID:</strong> {{chat_id}}<br />
+                    <strong style="color:#1f2937;">Agent:</strong> {{agent_name}}<br />
+                    <strong style="color:#1f2937;">Started:</strong> {{started_at}}<br />
+                    <strong style="color:#1f2937;">Ended:</strong> {{ended_at}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Transcript -->
+          <tr>
+            <td style="padding:18px 36px 8px;">
+              <h2 style="margin:0 0 12px; font-size:14px; font-weight:700; color:#1f2937; font-family:Arial, Helvetica, sans-serif; text-align:left;">
+                Conversation transcript
+              </h2>
+
+              <!-- {{#each messages}} loop start -->
+              <!-- Customer message -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
+                <tr>
+                  <td align="left">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="max-width:78%;">
+                      <tr>
+                        <td style="background:#f3f4f6; color:#1f2937; padding:10px 14px; border-radius:12px 12px 12px 4px; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:1.5;">
+                          {{message_text}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 4px 0; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#9ca3af;">
+                          {{customer_name}} · {{time}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Agent message -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
+                <tr>
+                  <td align="right">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="max-width:78%;">
+                      <tr>
+                        <td style="background:#2563eb; color:#ffffff; padding:10px 14px; border-radius:12px 12px 4px 12px; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:1.5;">
+                          {{message_text}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="right" style="padding:4px 4px 0; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#9ca3af;">
+                          {{agent_name}} · {{time}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!-- {{/each}} loop end -->
+
+            </td>
+          </tr>
+
+          <!-- Download / actions -->
+          <tr>
+            <td align="center" style="padding:18px 36px 36px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
+                <tr>
+                  <td align="center" bgcolor="#2563eb" style="border-radius:8px;">
+                    <a href="https://chatmesaj.cc/chats/{{chat_id}}/transcript.pdf" style="display:inline-block; padding:13px 36px; font-size:14px; font-weight:700; color:#ffffff; text-decoration:none; font-family:Arial, Helvetica, sans-serif;">
+                      Download PDF
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin:18px auto 0; max-width:360px; color:#9ca3af; font-size:12px; line-height:1.55; font-family:Arial, Helvetica, sans-serif;">
+                Need more help? Just reply to this email and we will reopen the conversation.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" bgcolor="#2563eb" style="padding:16px 28px; color:#ffffff; font-size:12px; font-weight:600; line-height:1.5; font-family:Arial, Helvetica, sans-serif;">
+              This transcript was sent because your {{site_name}} chat session was closed. Please keep it for your records.
+            </td>
+          </tr>
+        </table>
+
+        <!-- Sub-footer -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px;">
+          <tr>
+            <td align="center" style="padding:18px 12px; color:#9ca3af; font-size:11px; font-family:Arial, Helvetica, sans-serif;">
+              &copy; {{site_name}}. All rights reserved.
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

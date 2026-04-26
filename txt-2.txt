@@ -1,0 +1,26 @@
+# Terminal 1 — backend
+cd server
+cp .env.example .env
+npm install
+# Docker ilə Postgres:
+docker run --name chatbot-pg -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=chatbot -p 5432:5432 -d postgres:16
+npm run prisma:migrate
+docker exec -i chatbot-pg psql -U postgres -d chatbot < prisma/fts_setup.sql
+npm run seed
+# → apiKey kopyala: demo_xxxxx
+npm run dev
+
+# Terminal 2 — frontend
+cd ..
+cp .env.example .env
+# .env-ə yaz: VITE_WIDGET_API_KEY=demo_xxxxx
+npm install
+npm run dev
+
+
+
+http://localhost:5173 — admin panel, login admin@example.com / admin1234
+http://localhost:5173/demo-site.html — widget-i açıb "çatdırılma neçə günə olur?" yazın → bot cavab verir
+"Rənglər var?" yazın → "operator..." cavabı → admin Inbox-da yeni söhbət + canlı notification
+Admin-də cavab yazın → widget-də anında görünür
+Bütün sistem real data + real-time işləyir. Növbəti tövsiyələr: production VPS deploy (nginx + SSL + pm2) və ya AI inteqrasiyası (OpenAI key olsa, knowledge search nəticələrini LLM-lə birləşdirib daha təbii cavab verə bilər).

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{site_name}} — {{subject_label}}</title>
+</head>
+<body style="margin:0; padding:0; background:#eef3ff; font-family: Arial, Helvetica, sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef3ff; padding:32px 12px;">
+    <tr>
+      <td align="center">
+
+        <!-- Logo -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px;">
+          <tr>
+            <td align="center" style="padding-bottom:18px;">
+              <img src="logo_mail.png" alt="{{site_name}}" width="120" style="display:block; border:0; outline:none; text-decoration:none; height:auto;" />
+            </td>
+          </tr>
+        </table>
+
+        <!-- Card -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px; background:#ffffff; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.08); overflow:hidden;">
+          <tr>
+            <td align="center" style="padding:40px 36px 24px;">
+
+              <!-- Illustration -->
+              <img src="02.png" alt="" width="140" style="display:block; border:0; outline:none; text-decoration:none; height:auto; margin:0 auto 24px;" />
+
+              <!-- Title -->
+              <h1 style="margin:0 0 14px; font-size:20px; font-weight:700; color:#1f2937; font-family:Arial, Helvetica, sans-serif;">
+                {{title}}
+              </h1>
+
+              <!-- Greeting + lead -->
+              <p style="margin:0 auto 6px; max-width:380px; color:#1f2937; font-size:14px; line-height:1.6; font-weight:600; font-family:Arial, Helvetica, sans-serif;">
+                {{greeting}}
+              </p>
+              <p style="margin:0 auto; max-width:380px; color:#6b7280; font-size:14px; line-height:1.6; font-weight:500; font-family:Arial, Helvetica, sans-serif;">
+                {{lead}}
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Reply bubble -->
+          <tr>
+            <td style="padding:0 36px 8px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f3f6ff; border-radius:10px;">
+                <tr>
+                  <td style="padding:16px 18px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#1f2937; line-height:1.55; border-left:3px solid #2563eb;">
+                    {{message_text}}
+                  </td>
+                </tr>
+              </table>
+              <div style="margin-top:6px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#9ca3af;">
+                {{agent_name}}
+              </div>
+            </td>
+          </tr>
+
+          <!-- CTA -->
+          <tr>
+            <td align="center" style="padding:18px 36px 36px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
+                <tr>
+                  <td align="center" bgcolor="#2563eb" style="border-radius:8px;">
+                    <a href="{{site_url}}" style="display:inline-block; padding:13px 36px; font-size:14px; font-weight:700; color:#ffffff; text-decoration:none; font-family:Arial, Helvetica, sans-serif;">
+                      {{cta_label}}
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin:18px auto 0; max-width:360px; color:#9ca3af; font-size:12px; line-height:1.55; font-family:Arial, Helvetica, sans-serif;">
+                {{cta}}
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" bgcolor="#2563eb" style="padding:16px 28px; color:#ffffff; font-size:12px; font-weight:600; line-height:1.5; font-family:Arial, Helvetica, sans-serif;">
+              {{regards}} {{site_name}}
+            </td>
+          </tr>
+        </table>
+
+        <!-- Sub-footer -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px;">
+          <tr>
+            <td align="center" style="padding:18px 12px; color:#9ca3af; font-size:11px; font-family:Arial, Helvetica, sans-serif;">
+              &copy; {{site_name}}. All rights reserved.
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
