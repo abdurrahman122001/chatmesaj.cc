@@ -56,7 +56,7 @@ export default function AdminSidebar({ activePage, onSelectPage }) {
   }
 
   return (
-    <aside className="flex w-[228px] shrink-0 flex-col border-r border-[#dfe5ee] bg-[#f5f7fa] px-3 py-4">
+    <aside className="flex shrink-0 flex-col border-r border-[#dfe5ee] bg-[#f5f7fa] px-3 py-4" style={{ width: '228px' }}>
       <div className="space-y-1">
         {primaryItems.filter((item) => item.key === "dashboard").map((item) => renderNavButton(item))}
         {primaryItems.filter((item) => item.key === "knowledge").map((item) => (
